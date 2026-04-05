@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,9 @@ namespace WinSerialMonitor
         {
             InitializeComponent();
             InitializeCustomComponents();
+
+            var version = Application.ProductVersion;
+            this.Text = $"WinSerial Monitor {version}";
         }
 
         private void InitializeCustomComponents()
